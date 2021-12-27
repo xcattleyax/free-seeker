@@ -19,7 +19,7 @@ module FreeSeeker
       g.stylesheets false
       g.javascripts false
       g.helper false
-      g.test_frameword false
+      g.test_framework false
     end
   end
 end
