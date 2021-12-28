@@ -13,3 +13,66 @@
  *= require_tree .
  *= require_self
  */
+
+ * {
+   box-sizing: border-box;
+ }
+
+.header{
+  height: 100px;
+  background-color: rgb(70, 180, 250);
+  /* position: fixed; */
+  display: flex;
+}
+
+.app-name{
+  height: 100px;
+  width: 200px;
+  background-color: rgb(70, 160, 250);
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+}
+
+.header-right{
+  height: 100px;
+  width: calc(100vw - 200px);
+}
+
+.header-content{
+  height: 60px;
+  display: flex;
+}
+
+.user-name{
+  font-size: 32px;
+  color: white;
+  width: calc(100vw - 500px);
+  padding: 5px 20px;
+}
+
+.login{
+  font-size: 20px;
+  width: 150px;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.link-box{
+  width: 120px;
+  border-radius: 100px/ 50px;
+  background-color: rgb(70, 160, 250);
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+.header-menu{
+  height: 40px;
+  display: flex;
+  border: 1px solid black;
+}
