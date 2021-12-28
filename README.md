@@ -20,6 +20,7 @@
 | Column             | Type   | Options                   |
 | ------------------ | ------ | ------------------------- |
 | name               | string | null: false               |
+| content            | string | null: false               |
 
 ### Association
 
