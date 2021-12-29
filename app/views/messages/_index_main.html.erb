@@ -1,14 +1,14 @@
 <div class="message-space">
   <% @messages.each do |message| %>
     <% if message.user_id == current_user.id %>
-    <div class="message-mine"><%= message.message %>
-      <%= message.user.name %>
-    </div>
-    <% else %>
-    <div class="message-content"><%= message.message %>
-      <%= message.user.name %>
-    </div>
-    <% end %>
+<%# white-space: pre-wrap; 使用のため改行、スペース注意 %>
+<div class="message-mine"><%= message.user.name %>  <%= l message.created_at %>
+<p class="message-comment"><%= message.message %></p></div>
+<% else %>
+<div class="message-content"><%= message.user.name %>  <%= l message.created_at %>
+<p class="message-comment"><%= message.message %></p></div>
+<% end %>
+<%# white-space: pre-wrap; 使用ここまで %>
   <% end %>
 </div>
 <%= form_with model: [@group, @message], class:"message-form-space", local: true do |f| %>
