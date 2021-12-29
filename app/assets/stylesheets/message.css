@@ -1,8 +1,26 @@
+/* チャット一覧 */
 .message-space{
   height: calc(100vh - 200px);
-  background-color: gray;
+  padding: 0 10px;
+  border: 1px solid gray;
+  overflow-y: scroll;
 }
 
+.message-mine{
+  width: fit-content;
+  background-color: lightblue;
+  padding: 5px; 
+  margin: 5px 0 0 auto;
+}
+
+.message-content{
+  width: fit-content;
+  background-color: lightgray;
+  padding: 5px; 
+  margin-top: 5px;
+}
+
+/* チャット入力 */
 .message-form-space{
   height: 100px;
   padding: 10px;
