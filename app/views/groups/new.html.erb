@@ -1,0 +1,9 @@
+<%= form_with model: @group, class:'group-form', local: true do |f| %>
+  <p>グループ名</p>
+  <%= f.text_field :name, class:'group-field' %>
+  <p>内容</p>
+  <%= f.text_area :content, class:'group-area' %>
+  <input name="group[user_ids][]" type="hidden" value=<%= current_user.id %>>
+  <%= render "layouts/error_messages", model: f.object %>
+  <%= f.submit '作成', class:'button' %>
+<% end %>

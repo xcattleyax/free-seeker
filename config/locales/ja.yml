@@ -3,3 +3,5 @@ ja:
     attributes:
       user:
         name: 名前
+      group:
+        name: 名前
