@@ -4,20 +4,26 @@
   padding: 0 10px;
   border: 1px solid gray;
   overflow-y: scroll;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .message-mine{
   width: fit-content;
   background-color: lightblue;
-  padding: 5px; 
-  margin: 5px 0 0 auto;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 0 0 5px auto;
+  white-space: pre-line;
 }
 
 .message-content{
   width: fit-content;
   background-color: lightgray;
-  padding: 5px; 
-  margin-top: 5px;
+  padding: 5px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  white-space: pre-line;
 }
 
 /* チャット入力 */

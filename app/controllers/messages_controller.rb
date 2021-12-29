@@ -4,7 +4,7 @@ class MessagesController < ApplicationController
     @group = Group.find(params[:group_id])
     @groups = current_user.group
     @message = Message.new
-    @messages = Message.where(group_id: params[:group_id])
+    @messages = Message.where(group_id: params[:group_id]).order("created_at DESC").limit(50)
   end
 
   def create
