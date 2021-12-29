@@ -1,0 +1,12 @@
+.side-bar{
+  height: calc(100vh - 100px);
+  width: 200px;
+  padding: 5px;
+  border-right: 1px solid gray;
+}
+
+.button{
+  width: 50px;
+  display: block;
+  margin: 0 auto;
+}

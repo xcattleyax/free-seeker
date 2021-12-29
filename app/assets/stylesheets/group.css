@@ -1,0 +1,33 @@
+/* top page */
+.group-box{
+  border: 1px solid gray;
+  margin-bottom: 5px;
+}
+
+.group-name{
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+  padding-left: 10px;
+  display: block;
+}
+/* group new */
+.group-form{
+  padding: 20px;
+  text-align: center;
+}
+
+.group-field{
+  width: 80vw;
+  font-size: 20px;
+  word-break: break-all;
+  margin-bottom: 10px;
+}
+
+.group-area{
+  height: 50vh;
+  width: 80vw;
+  font-size: 20px;
+  word-break: break-all;
+  margin-bottom: 10px;
+}

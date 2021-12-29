@@ -1,0 +1,5 @@
+<% unless @groups == nil%>
+  <% @groups.each do |group| %>
+    <p class="group-box"><%= link_to group.name, "#", class:"group-name" %></p>
+  <% end %>
+<% end %>
