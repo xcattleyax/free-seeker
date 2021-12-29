@@ -1,0 +1,18 @@
+.message-space{
+  height: calc(100vh - 200px);
+  background-color: gray;
+}
+
+.message-form-space{
+  height: 100px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.message-form{
+  font-size: 20px;
+  height: 40px;
+  width: calc(100vw - 300px);
+}

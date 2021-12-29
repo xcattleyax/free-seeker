@@ -1,3 +1,7 @@
+.wrapper{
+  display: flex;
+}
+
 .side-bar{
   height: calc(100vh - 100px);
   width: 200px;
@@ -5,8 +9,20 @@
   border-right: 1px solid gray;
 }
 
-.button{
+.main-space{
+  height: calc(100vh - 100px);
+  width: calc(100vw - 200px);
+}
+
+.button-center{
+  font-size: 18px;
   width: 50px;
   display: block;
   margin: 0 auto;
+}
+
+.button{
+  font-size: 18px;
+  width: 50px;
+  display: block;
 }

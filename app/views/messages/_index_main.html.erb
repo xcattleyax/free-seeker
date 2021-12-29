@@ -1,0 +1,6 @@
+<div class="message-space">
+</div>
+<%= form_with model: [Group, @message], class:"message-form-space", local: true do |f| %>
+  <%= f.text_field :message, class:"message-form"%>
+  <%= f.submit '送信', class:"button"%>
+<% end %>

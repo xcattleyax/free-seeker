@@ -5,5 +5,5 @@
   <%= f.text_area :content, class:'group-area' %>
   <input name="group[user_ids][]" type="hidden" value=<%= current_user.id %>>
   <%= render "layouts/error_messages", model: f.object %>
-  <%= f.submit '作成', class:'button' %>
+  <%= f.submit '作成', class:'button-center' %>
 <% end %>
