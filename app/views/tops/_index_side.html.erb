@@ -3,6 +3,6 @@
 <% end %>
 <% unless @groups == nil%>
   <% @groups.each do |group| %>
-    <p class="group-box"><%= link_to group.name, "#", class:"group-name" %></p>
+    <p class="group-box"><%= link_to group.name, group_messages_path(group_id: group.id), class:"group-name" %></p>
   <% end %>
 <% end %>
