@@ -17,7 +17,7 @@
  * {
    box-sizing: border-box;
  }
-
+/* ヘッダー */
 .header{
   height: 100px;
   background-color: rgb(70, 180, 250);
@@ -46,13 +46,14 @@
 .header-content{
   height: 60px;
   display: flex;
+  align-items: center;
 }
 
 .user-name{
   font-size: 32px;
   color: white;
   width: calc(100vw - 500px);
-  padding: 5px 20px;
+  padding-left: 20px;
 }
 
 .login{
