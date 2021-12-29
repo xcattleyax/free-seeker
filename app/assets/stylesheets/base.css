@@ -6,7 +6,9 @@
 }
 
 .button{
-  width: 50px;
+  width: fit-content;
   display: block;
+  padding: 3px 10px;
+  border: 1px solid gray;
   margin: 0 auto;
 }
