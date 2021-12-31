@@ -10,9 +10,7 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
     if @message.save
-      redirect_to group_messages_path(group_id: params[:group_id])
-    else
-      render group_messages_path(group_id: params[:group_id])
+      ActionCable.server.broadcast "message_channel", {message: @message, user: @message.user, group: @message.group}
     end
   end
 

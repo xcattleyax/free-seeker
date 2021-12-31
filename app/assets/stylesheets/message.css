@@ -30,9 +30,14 @@
   word-break: break-all;
 }
 
-.message-comment{
+.message-mine p{
   padding-top: 10px;
 }
+
+.message-content p{
+  padding-top: 10px;
+}
+
 
 /* チャット入力 */
 .message-form-space{
