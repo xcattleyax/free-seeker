@@ -1,0 +1,55 @@
+/* チャット一覧 */
+.message-space{
+  height: calc(100vh - 200px);
+  padding: 0 10px;
+  border: 1px solid gray;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.message-mine{
+  width: fit-content;
+  max-width: 80%;
+  background-color: lightblue;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 0 0 5px auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.message-content{
+  width: fit-content;
+  max-width: 80%;
+  background-color: lightgray;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.message-mine p{
+  padding-top: 10px;
+}
+
+.message-content p{
+  padding-top: 10px;
+}
+
+
+/* チャット入力 */
+.message-form-space{
+  height: 100px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.message-form{
+  font-size: 20px;
+  height: 40px;
+  width: calc(100vw - 300px);
+}
