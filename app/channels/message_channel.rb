@@ -1,6 +1,7 @@
 class MessageChannel < ApplicationCable::Channel
   def subscribed
-    stream_from "message_channel"
+    @group = Group.find(params[:group_id])
+    stream_for @group
   end
 
   def unsubscribed

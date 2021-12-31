@@ -1,6 +1,9 @@
 import consumer from "./consumer"
 
-consumer.subscriptions.create("MessageChannel" ,{
+consumer.subscriptions.create({
+  channel: "MessageChannel",
+  group_id: location.pathname.match(/\d+/)[0]
+},{
   connected() {
     // Called when the subscription is ready for use on the server
   },
@@ -25,7 +28,7 @@ if (data.user.id == current_user_id) {
 html = `<div class="message-mine">${ data.user.name }  ${year}/${month}/${today} ${hour}:${mins}
 <p>${ data.message.message }</p></div>`
 } else {
-html = `<div class="message-content">${ data.user.name }  ${ data.message.created_at }
+html = `<div class="message-content">${ data.user.name }  ${year}/${month}/${today} ${hour}:${mins}
 <p>${ data.message.message }</p></div>`
 };
     const messages = document.getElementById("messages")

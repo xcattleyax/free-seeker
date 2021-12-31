@@ -9,8 +9,9 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.new(message_params)
+    @group = Group.find(params[:group_id])
     if @message.save
-      ActionCable.server.broadcast "message_channel", {message: @message, user: @message.user, group: @message.group}
+      MessageChannel.broadcast_to @group, {message: @message, user: @message.user, group: @message.group}
     end
   end
 
