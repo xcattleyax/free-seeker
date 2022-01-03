@@ -12,6 +12,12 @@
 .main-space{
   height: calc(100vh - 100px);
   width: calc(100vw - 200px);
+  padding: 10px;
+}
+
+.main-space-full{
+  height: calc(100vh - 100px);
+  width: calc(100vw - 200px);
 }
 
 .button-center{
@@ -25,4 +31,19 @@
   font-size: 18px;
   width: 50px;
   display: block;
+}
+
+.link-button{
+  font-size: 18px;
+  color: black;
+  width: 60px;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px;
+  margin: 0 auto;
+  margin-top: 5px;
+  border: 1px solid gray;
+  background-color: lightgray;
+  border-radius: 10px;
 }

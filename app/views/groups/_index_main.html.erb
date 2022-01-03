@@ -1,0 +1,10 @@
+<% @groups_index.each do |group| %>
+  <div class="group-box1">
+    <div class="group-name1">
+      <p>グループ名 :<%= group.name %></p>
+      <p>人数 :<%= group.users.length %>人</p>
+    </div>
+    <p class="group-content"><%= group.content %></p>
+  <%= link_to "詳細", "#", class:"link-button" %>
+  </div>
+<% end %>

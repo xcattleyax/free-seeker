@@ -1,5 +1,11 @@
 class GroupsController < ApplicationController
 
+  def index
+    @groups = current_user.group
+    group_pluck = @groups.pluck(:id)
+    @groups_index = Group.where.not(id: group_pluck)
+  end
+
   def new
     @group = Group.new
   end
