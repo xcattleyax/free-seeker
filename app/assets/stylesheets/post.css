@@ -1,0 +1,14 @@
+.post-form{
+  font-size: 24px;
+  text-align: center;
+}
+
+.post-form p{
+  margin-bottom: 40px;
+}
+
+.post-title{
+  font-size: 24px;
+  height: 40px;
+  width: calc(100vw - 300px);
+}
