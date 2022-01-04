@@ -1,5 +1,4 @@
 class GroupsController < ApplicationController
-
   def index
     @groups = current_user.group
     group_pluck = @groups.pluck(:id)
@@ -56,6 +55,7 @@ class GroupsController < ApplicationController
   end
 
   private
+
   def group_params
     params.require(:group).permit(:name, :content, user_ids: [])
   end

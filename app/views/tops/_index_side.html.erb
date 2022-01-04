@@ -1,5 +1,5 @@
 <% if user_signed_in?%>
-<%= link_to "グループを探す", groups_path %>
+<%= link_to "グループを探す", groups_path, class:"link-button" %>
 <p class="group-box"><%= link_to "Free Seeker", "#", class:"group-name" %></p>
 <% end %>
 <% unless @groups == nil%>
