@@ -74,6 +74,7 @@
 | Column      | Type       | Options                                     |
 | ----------- | ---------- | ------------------------------------------- |
 | title       | string     | null: false                                 |
+| status_id   | integer    | null: false                                 |
 | contributor | references | null: false, polymorphic: true, index: true |
 
 ### Association
