@@ -5,6 +5,6 @@
       <p>人数 :<%= group.users.length %>人</p>
     </div>
     <p class="group-content"><%= group.content %></p>
-  <%= link_to "詳細", "#", class:"link-button" %>
+    <%= link_to "詳細", group_path(group.id), class:"link-button" %>
   </div>
 <% end %>

@@ -55,3 +55,32 @@
   word-break: break-all;
   margin-bottom: 10px;
 }
+
+/* group show */
+.group-name2{
+  font-size: 20px;
+  text-align: center;
+  padding: 5px 0;
+  border: 1px solid gray;
+  margin-bottom: 10px;
+}
+
+.group-content1{
+  font-size: 20px;
+  height: calc(100vh - 250px);
+  padding: 5px;
+  border: 1px solid gray;
+  overflow-y: scroll;
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+
+.group-left-top{
+  padding: 5px 0;
+  text-align: center;
+  border-bottom: 1px solid gray;
+}
+
+.group-left-name{
+  padding: 5px;
+}

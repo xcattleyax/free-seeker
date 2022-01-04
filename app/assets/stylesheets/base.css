@@ -1,7 +1,9 @@
+/* display: flex; */
 .wrapper{
   display: flex;
 }
 
+/* フレーム */
 .side-bar{
   height: calc(100vh - 100px);
   width: 200px;
@@ -20,6 +22,23 @@
   width: calc(100vw - 200px);
 }
 
+.main-sub-frame{
+  font-size: 18px;
+  width: calc(100vw - 400px);
+  padding: 10px;
+}
+
+.left-bar{
+  font-size: 20px;
+  height: calc(100vh - 120px);
+  width: 180px;
+  padding: 5px;
+  border: 1px solid gray;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+/* ボタン */
 .button-center{
   font-size: 18px;
   width: 50px;
@@ -36,7 +55,7 @@
 .link-button{
   font-size: 18px;
   color: black;
-  width: 60px;
+  width: fit-content;
   display: block;
   text-decoration: none;
   text-align: center;
