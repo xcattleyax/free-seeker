@@ -9,5 +9,6 @@ Rails.application.routes.draw do
       patch 'addition'
     end
   end
+  resources :posts, only:[:new]
 
 end
