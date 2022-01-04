@@ -32,6 +32,10 @@ class GroupsController < ApplicationController
     redirect_to root_path
   end
 
+  def home
+    
+  end
+
   private
   def group_params
     params.require(:group).permit(:name, :content, user_ids: [])

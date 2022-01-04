@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   root to: 'tops#index'
   resources :groups, only:[:index, :new, :create, :show, :update] do
     resources :messages, only:[:index, :create]
+    member do
+      get 'home'
+    end
   end
 
 end
