@@ -1,0 +1,5 @@
+<%= form_with model: @group, class:'group-form', local: true do |f| %>
+  <p>内容</p>
+  <%= f.text_area :content, class:'group-area' %>
+  <%= f.submit '変更', class:'button-center' %>
+<% end %>

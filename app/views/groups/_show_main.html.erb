@@ -1,0 +1,13 @@
+<div class="wrapper">
+  <div class="main-sub-frame">
+    グループ名<p class="group-name2"><%= @group.name %></p>
+    活動内容<p class="group-content1"><%= @group.content %></p>
+    <%= link_to "加入する", addition_group_path(@group.id), method: :patch, class:"link-button" %>
+  </div>
+  <div class="left-bar">
+    <p class="group-left-top">メンバー <%= @users.length %>人</p>
+    <% @users.each do |user| %>
+      <p class="group-left-name"><%= user.name %></p>
+    <% end %>
+  </div>
+</div>

@@ -1,9 +1,5 @@
 class TopsController < ApplicationController
-
   def index
-    if user_signed_in?
-      @groups = current_user.group
-    end
+    @groups = current_user.group if user_signed_in?
   end
-
 end

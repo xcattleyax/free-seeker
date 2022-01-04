@@ -16,7 +16,7 @@ RSpec.describe Message, type: :model do
       it 'messageが空である' do
         @message.message = ''
         @message.valid?
-        expect(@message.errors.full_messages).to include("Messageを入力してください")
+        expect(@message.errors.full_messages).to include('Messageを入力してください')
       end
     end
   end
