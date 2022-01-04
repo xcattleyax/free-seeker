@@ -49,9 +49,14 @@ class GroupsController < ApplicationController
     redirect_to home_group_path(group.id)
   end
 
+  def destroy
+    group_user = GroupUser.find_by(group_id: params[:id], user_id: current_user.id)
+    group_user.destroy
+    redirect_to root_path
+  end
+
   private
   def group_params
     params.require(:group).permit(:name, :content, user_ids: [])
   end
-
 end

@@ -4,7 +4,7 @@
     活動内容<p class="group-content1"><%= @group.content %></p>
     <div class="wrapper">
       <%= link_to "編集", edit_group_path(@group.id), class:"link-button" %>
-      <%= link_to "脱退", "#", class:"link-button" %>
+      <%= link_to "脱退", group_path(@group.id), method: :delete, class:"link-button" %>
     </div>
   </div>
   <div class="left-bar">
