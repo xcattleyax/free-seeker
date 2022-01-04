@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :messages, only:[:index, :create]
     member do
       get 'home'
+      patch 'addition'
     end
   end
 

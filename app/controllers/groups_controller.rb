@@ -25,7 +25,7 @@ class GroupsController < ApplicationController
     @user_ids = @users.pluck(:id) << current_user.id
   end
 
-  def update
+  def addition
     group = Group.find(params[:id])
     user = User.find(current_user.id)
     group.users << user
@@ -33,7 +33,9 @@ class GroupsController < ApplicationController
   end
 
   def home
-    
+    @group = Group.find(params[:id])
+    @users = @group.users
+    @groups = current_user.group
   end
 
   private
