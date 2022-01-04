@@ -2,6 +2,10 @@
   <div class="main-sub-frame">
     グループ名<p class="group-name2"><%= @group.name %></p>
     活動内容<p class="group-content1"><%= @group.content %></p>
+    <div class="wrapper">
+      <%= link_to "編集", edit_group_path(@group.id), class:"link-button" %>
+      <%= link_to "脱退", "#", class:"link-button" %>
+    </div>
   </div>
   <div class="left-bar">
     <p class="group-left-top">メンバー <%= @users.length %>人</p>

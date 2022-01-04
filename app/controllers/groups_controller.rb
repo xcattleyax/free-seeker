@@ -21,6 +21,7 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
+    @groups = current_user.group
     @users = @group.users
     @user_ids = @users.pluck(:id) << current_user.id
   end
@@ -36,6 +37,16 @@ class GroupsController < ApplicationController
     @group = Group.find(params[:id])
     @users = @group.users
     @groups = current_user.group
+  end
+
+  def edit
+    @group = Group.find(params[:id])
+  end
+
+  def update
+    group = Group.find(params[:id])
+    group.update(group_params)
+    redirect_to home_group_path(group.id)
   end
 
   private
