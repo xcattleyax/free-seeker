@@ -22,13 +22,19 @@ class GroupsController < ApplicationController
   def show
     @group = Group.find(params[:id])
     @users = @group.users
+    @user_ids = @users.pluck(:id) << current_user.id
   end
 
   def update
+    group = Group.find(params[:id])
+    user = User.find(current_user.id)
+    group.users << user
+    redirect_to root_path
   end
 
   private
   def group_params
     params.require(:group).permit(:name, :content, user_ids: [])
   end
+
 end

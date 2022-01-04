@@ -70,6 +70,7 @@
   height: calc(100vh - 250px);
   padding: 5px;
   border: 1px solid gray;
+  margin-bottom: 5px;
   overflow-y: scroll;
   word-break: break-all;
   white-space: pre-wrap;
