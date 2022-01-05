@@ -1,0 +1,13 @@
+<div class="page-side-bar">
+
+目次
+<div class="page-side-box">
+  <p><%= link_to " タイトル","#" %></p>
+  <% unless @pages == nil%>
+    <% @pages.each do |page| %>
+      <p><%= link_to " #{page.page} :#{page.content }","#" %></p>
+    <% end %>
+  <% end %>
+</div>
+<%= link_to "公開", "#", class:"link-button" %>
+</div>

@@ -1,0 +1,15 @@
+<%= form_with model: [@post, @page], class:"page-form", local: true do |f| %>
+  ページ -<%= @page_length %>-
+  <%= f.hidden_field :page, value: @page_length %>
+  <div class="post-form-box">
+    <p>ページタイトル</p>
+    <%= f.text_field :content, class:"page-title" %>
+  </div>
+  <div class="post-form-box">
+    <p>本文(1000字以内)</p>
+    <%= f.text_area :text, class:"page-text"%>
+  </div>
+  <div class="post-button">
+    <%= f.submit "保存", class:"button-center" %>
+  </div>
+<% end %>

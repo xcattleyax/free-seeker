@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_user_params)
     if @post.save
-      redirect_to root_path
+      redirect_to new_post_page_path(@post.id)
     else
       render "new"
     end

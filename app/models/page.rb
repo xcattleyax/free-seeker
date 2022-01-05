@@ -1,6 +1,9 @@
 class Page < ApplicationRecord
   belongs_to :post
 
-  validates :content, presence: true
-  validates :text, presence: true
+  with_options presence: true do
+    validates :content
+    validates :text
+    validates :page
+  end
 end
