@@ -1,5 +1,7 @@
 <%= form_with model: @post, class:"post-form", local: true do |f| %>
-  <p>新規投稿</p>
+  <% if controller.action_name == 'new' %>
+    <p>新規投稿</p>
+  <% end %>
   タイトル
   <p><%= f.text_field :title, class:"post-title" %></p>
   <%= f.submit "決定", class:"button-center" %>
