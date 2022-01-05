@@ -65,7 +65,7 @@
 
 .link-box{
   width: 140px;
-  border-radius: 100px/ 50px;
+  border-radius: 50px/ 50px;
   background-color: rgb(70, 160, 250);
   display: block;
   color: white;
@@ -75,7 +75,19 @@
 .header-menu{
   height: 40px;
   display: flex;
-  border: 1px solid black;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.link-menu{
+  font-size: 18px;
+  width: 100px;
+  border-radius: 50px/ 50px;
+  background-color: rgb(70, 160, 250);
+  display: block;
+  color: white;
+  text-decoration: none;
+  text-align: center;
 }
 
 .hidden-header{

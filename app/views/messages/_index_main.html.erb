@@ -12,11 +12,11 @@
   <% end %>
 </div>
 
-<%= link_to "Group Home", home_group_path(@group.id), class:"link-button" %>
 <%= form_with model: [@group, @message], class:"message-form-space", id: "message-form", local: false do |f| %>
   <%= f.text_area :message, class:"message-form"%>
   <%= f.submit '送信', class:"button"%>
 <% end %>
+<%= link_to "Group Home", home_group_path(@group.id), class:"link-button" %>
 
 <%# javascript用のcurrent_user.id %>
 <%= form_with local: false do |f|%>
