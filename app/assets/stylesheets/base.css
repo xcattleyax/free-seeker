@@ -28,9 +28,9 @@
   padding: 10px;
 }
 
-.left-bar{
+.right-bar{
   font-size: 20px;
-  height: calc(100vh - 120px);
+  height: calc(100vh - 160px);
   width: 180px;
   padding: 5px;
   border: 1px solid gray;

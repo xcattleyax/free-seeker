@@ -4,5 +4,6 @@
   <% end %>
   タイトル
   <p><%= f.text_field :title, class:"post-title" %></p>
+  <%= f.hidden_field :contributor, value: @contributor %>
   <%= f.submit "決定", class:"button-center" %>
 <% end %>
