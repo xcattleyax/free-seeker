@@ -1,5 +1,14 @@
 class PostsController < ApplicationController
 
+  def index
+    contributor =  if params[:group_id] == nil
+                      User.find(current_user.id)
+                    else
+                      Group.find(params[:group_id])
+                    end
+    @posts = contributor.posts
+  end
+
   def new
     @post = Post.new
     @contributor =  if params[:group_id] == nil
@@ -26,6 +35,7 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
+    @pages = @post.pages
   end
 
   def update

@@ -13,5 +13,6 @@
 <div class="wrapper">
   <%= link_to "編集", edit_group_path(@group.id), class:"link-button" %>
   <%= link_to "新規投稿", new_post_path(group_id: @group.id), class:"link-button" %>
+  <%= link_to "編集投稿", posts_path(group_id: @group.id), class:"link-button" %>
   <%= link_to "脱退", group_path(@group.id), method: :delete, class:"link-button" %>
 </div>

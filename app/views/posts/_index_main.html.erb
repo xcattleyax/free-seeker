@@ -1,0 +1,9 @@
+<div class="post-index">
+作成中の投稿一覧
+<% @posts.each do |post| %>
+  <div class="post-box">
+    <%= link_to "タイトル: #{post.title}", edit_post_path(post.id), class:"post-link" %>
+    <p><%= "最終更新日 #{l post.updated_at}" %></p>
+  </div>
+<% end %>
+</div>

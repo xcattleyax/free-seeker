@@ -9,7 +9,7 @@ Rails.application.routes.draw do
       patch 'addition'
     end
   end
-  resources :posts, only:[:new, :create, :edit, :update] do
+  resources :posts, only:[:index, :new, :create, :edit, :update] do
     resources :pages, only:[:new, :create, :edit, :update]
   end
 
