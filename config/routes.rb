@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     end
   end
   resources :posts, only:[:new, :create, :edit, :update] do
-    resources :pages, only:[:new, :create]
+    resources :pages, only:[:new, :create, :edit, :update]
   end
 
 end

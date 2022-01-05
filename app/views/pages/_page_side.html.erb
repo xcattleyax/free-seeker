@@ -4,7 +4,7 @@
     <p><%= link_to " タイトル", edit_post_path(@post.id) %></p>
     <% unless @pages == nil%>
       <% @pages.each do |page| %>
-        <p><%= link_to " #{page.page} :#{page.content }","#" %></p>
+        <p><%= link_to " #{page.page} :#{page.content }", edit_post_page_path(post_id: @post.id, id: page.id) %></p>
       <% end %>
     <% end %>
   </div>
