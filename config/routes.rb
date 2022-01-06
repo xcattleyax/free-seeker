@@ -11,6 +11,13 @@ Rails.application.routes.draw do
   end
   resources :posts, only:[:index, :new, :create, :edit, :update] do
     resources :pages, only:[:new, :create, :edit, :update]
+    member do
+      patch 'release'
+    end
+    collection do
+      get 'list'
+      get 'search'
+    end
   end
 
 end

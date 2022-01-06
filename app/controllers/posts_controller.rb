@@ -6,7 +6,7 @@ class PostsController < ApplicationController
                     else
                       Group.find(params[:group_id])
                     end
-    @posts = contributor.posts
+    @posts = contributor.posts.where(status_id: 1)
   end
 
   def new
@@ -43,6 +43,33 @@ class PostsController < ApplicationController
     @contributor_value = post.contributor
     post.update(post_params)
     redirect_to new_post_page_path(post.id)
+  end
+
+  def release
+    post = Post.find(params[:id])
+    post.update(status_id: 2)
+    redirect_to root_path
+  end
+
+  def list
+    @posts = Post.where(status_id: 2).order('created_at DESC').limit(50)
+  end
+
+  def search
+    posts = Post.where(status_id: 2).order('created_at DESC').limit(50)
+    if params[:contributor] != "" && params[:title] != ""
+      user = User.find_by(name: params[:contributor])
+      group = Group.find_by(name: params[:contributor])
+      @posts = posts.where('title LIKE(?)', "%#{params[:title]}%").where(contributor: user).or(posts.where('title LIKE(?)', "%#{params[:title]}%").where(contributor: group))
+    elsif params[:contributor] != "" && params[:title] == ""
+      user = User.find_by(name: params[:contributor])
+      group = Group.find_by(name: params[:contributor])
+      @posts = posts.where(contributor: user).or(posts.where(contributor: group))
+    elsif params[:title] != ""
+      @posts = posts.where('title LIKE(?)', "%#{params[:title]}%")
+    else
+      @posts = posts
+    end
   end
 
   private

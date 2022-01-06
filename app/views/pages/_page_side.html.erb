@@ -8,5 +8,5 @@
       <% end %>
     <% end %>
   </div>
-  <%= link_to "公開", "#", class:"link-button" %>
+  <%= link_to "公開", release_post_path(@post.id), method: :patch, class:"link-button" %>
 </div>
