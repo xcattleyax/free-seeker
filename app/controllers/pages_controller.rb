@@ -1,5 +1,4 @@
 class PagesController < ApplicationController
-
   def new
     @page = Page.new
     @post = Post.find(params[:post_id])
@@ -12,7 +11,7 @@ class PagesController < ApplicationController
     if @page.save
       redirect_to new_post_page_path(params[:post_id])
     else
-      render "new"
+      render 'new'
     end
   end
 
@@ -33,15 +32,12 @@ class PagesController < ApplicationController
     @post = Post.find(params[:post_id])
     @page = Page.find(params[:id])
     @pages = @post.pages
-    unless @page.page == 1
-      @pre_page = Page.find_by(page: @page.page - 1)
-    end
-    unless @page.page == @pages.length
-      @next_page = Page.find_by(page: @page.page + 1)
-    end
+    @pre_page = Page.find_by(page: @page.page - 1) unless @page.page == 1
+    @next_page = Page.find_by(page: @page.page + 1) unless @page.page == @pages.length
   end
 
   private
+
   def page_params
     params.require(:page).permit(:content, :text, :page).merge(post_id: params[:post_id])
   end
