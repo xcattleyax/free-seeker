@@ -7,7 +7,7 @@
 <% end %>
 <% @posts.each do |post| %>
   <div class="post-box">
-    <%= link_to post.title, "#", class:"post-link" %>
+    <%= link_to post.title, post_path(post.id), class:"post-link" %>
     <p><%= "投稿 #{post.contributor.name}" %></p>
     <p><%= "投稿日 #{l post.updated_at}" %></p>
   </div>

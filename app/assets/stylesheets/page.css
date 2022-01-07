@@ -44,3 +44,41 @@
   word-break: break-all;
   overflow-y: scroll;
 }
+
+/* showメインスペース */
+.page-post{
+  font-size: 28px;
+  width: calc(100vw - 300px);
+  text-align: center;
+  border: 1px solid gray;
+  margin: 0 auto;
+}
+
+.page-post p{
+  font-size: 20px;
+}
+
+.page-content{
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+}
+
+.page-show{
+  font-size: 20px;
+  height: calc(100vh - 300px);
+  width: calc(100vw - 300px);
+  padding: 5px;
+  border: 1px solid gray;
+  margin: 0 auto;
+  word-break: break-all;
+  white-space: pre-wrap;
+  overflow-y: scroll;
+}
+
+.page-move{
+  font-size: 18px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}

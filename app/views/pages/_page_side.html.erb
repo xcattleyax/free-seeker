@@ -2,11 +2,11 @@
   目次
   <div class="page-side-box">
     <p><%= link_to " タイトル", edit_post_path(@post.id) %></p>
-    <% unless @pages == nil%>
-      <% @pages.each do |page| %>
-        <p><%= link_to " #{page.page} :#{page.content }", edit_post_page_path(post_id: @post.id, id: page.id) %></p>
-      <% end %>
+    <% @pages.each do |page| %>
+      <p><%= link_to " #{page.page} :#{page.content }", edit_post_page_path(post_id: @post.id, id: page.id) %></p>
     <% end %>
   </div>
-  <%= link_to "公開", release_post_path(@post.id), method: :patch, class:"link-button" %>
+  <% unless @pages == [] %>
+    <%= link_to "公開", release_post_path(@post.id), method: :patch, class:"link-button" %>
+  <% end%>
 </div>

@@ -47,6 +47,7 @@ class PostsController < ApplicationController
 
   def release
     post = Post.find(params[:id])
+    pages = post.pages
     post.update(status_id: 2)
     redirect_to root_path
   end
@@ -70,6 +71,12 @@ class PostsController < ApplicationController
     else
       @posts = posts
     end
+  end
+
+  def show
+    post = Post.find(params[:id])
+    page = post.pages.find_by(page: 1)
+    redirect_to post_page_path(post_id: params[:id], id: page.id)
   end
 
   private
