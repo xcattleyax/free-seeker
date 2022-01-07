@@ -1,0 +1,9 @@
+<%= form_with model: @post, class:"post-form", local: true do |f| %>
+  <% if controller.action_name == 'new' %>
+    <p>新規投稿</p>
+  <% end %>
+  タイトル
+  <p><%= f.text_field :title, class:"post-title" %></p>
+  <%= f.hidden_field :contributor, value: @contributor %>
+  <%= f.submit "決定", class:"button-center" %>
+<% end %>

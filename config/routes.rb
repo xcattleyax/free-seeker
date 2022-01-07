@@ -9,5 +9,15 @@ Rails.application.routes.draw do
       patch 'addition'
     end
   end
+  resources :posts, except:[:destroy] do
+    resources :pages, only:[:new, :create, :show, :edit, :update]
+    member do
+      patch 'release'
+    end
+    collection do
+      get 'list'
+      get 'search'
+    end
+  end
 
 end

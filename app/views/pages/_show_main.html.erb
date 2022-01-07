@@ -1,0 +1,10 @@
+<p class="page-content">ページ: <%= @page.page %> <%= @page.content %></p>
+<div class="page-show"><%= @page.text %></div>
+<div class="page-move">
+  <% unless @page.page == 1%>
+    <%= link_to "前ページ", post_page_path(post_id: @post.id, id: @pre_page.id) %>
+  <% end %>
+  <% unless @page.page == @pages.length %>
+    <%= link_to "次ページ", post_page_path(post_id: @post.id, id: @next_page.id) %>
+  <% end %>
+</div>

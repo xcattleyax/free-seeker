@@ -1,0 +1,14 @@
+<%= form_with url: search_posts_path , method: :get, class:"post-search-form", local: true do |f| %>
+  投稿者
+  <%= f.text_field :contributor, class:"post-search" %>
+  タイトルキーワード
+  <%= f.text_field :title, class:"post-search"%>
+  <%= f.submit "検索", class:"button"%>
+<% end %>
+<% @posts.each do |post| %>
+  <div class="post-box">
+    <%= link_to post.title, post_path(post.id), class:"post-link" %>
+    <p><%= "投稿 #{post.contributor.name}" %></p>
+    <p><%= "投稿日 #{l post.updated_at}" %></p>
+  </div>
+<% end %>

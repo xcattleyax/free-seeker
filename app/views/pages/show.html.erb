@@ -1,0 +1,12 @@
+<div class="wrapper">
+  <div class="side-bar">
+    <%= render "show_side" %>
+  </div>
+  <div class="main-space">
+    <div class="page-post">
+      タイトル: <%= @post.title %>
+      <p>投稿者: <%= @post.contributor.name %></p>
+    </div>
+    <%= render "show_main" %>
+  </div>
+</div>
