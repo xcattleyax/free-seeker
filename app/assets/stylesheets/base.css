@@ -11,6 +11,10 @@
   border-right: 1px solid gray;
 }
 
+.bottom-space{
+  padding: 10px;
+}
+
 .main-space{
   height: calc(100vh - 100px);
   width: calc(100vw - 200px);

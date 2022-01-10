@@ -62,8 +62,10 @@ ActiveRecord::Schema.define(version: 2022_01_10_064215) do
     t.date "date", null: false
     t.string "content", null: false
     t.text "text", null: false
+    t.bigint "group_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["group_id"], name: "index_scadules_on_group_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -84,4 +86,5 @@ ActiveRecord::Schema.define(version: 2022_01_10_064215) do
   add_foreign_key "messages", "groups"
   add_foreign_key "messages", "users"
   add_foreign_key "pages", "posts"
+  add_foreign_key "scadules", "groups"
 end
