@@ -1,0 +1,9 @@
+<%= month_calendar attribute: :date, events: @scadules do |date, scadules| %>
+  <%= date.day %>
+
+  <% scadules.each do |scadule| %>
+    <div>
+      <%= scadule.content %>
+    </div>
+  <% end %>
+<% end %>

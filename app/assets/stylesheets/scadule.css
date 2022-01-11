@@ -5,7 +5,11 @@
   margin: 0 10px 10px 0;
 }
 
-.scadule-calendar{
-  height: calc(100vh - 200px);
+/* カレンダー */
+.calendar-heading{
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
 }
+
 
