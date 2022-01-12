@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_04_081007) do
+ActiveRecord::Schema.define(version: 2022_01_10_064215) do
 
   create_table "group_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "group_id", null: false
@@ -58,6 +58,16 @@ ActiveRecord::Schema.define(version: 2022_01_04_081007) do
     t.index ["contributor_type", "contributor_id"], name: "index_posts_on_contributor_type_and_contributor_id"
   end
 
+  create_table "scadules", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.date "date", null: false
+    t.string "content", null: false
+    t.text "text", null: false
+    t.bigint "group_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["group_id"], name: "index_scadules_on_group_id"
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "email", default: "", null: false
@@ -76,4 +86,5 @@ ActiveRecord::Schema.define(version: 2022_01_04_081007) do
   add_foreign_key "messages", "groups"
   add_foreign_key "messages", "users"
   add_foreign_key "pages", "posts"
+  add_foreign_key "scadules", "groups"
 end

@@ -1,7 +1,7 @@
 class MessagesController < ApplicationController
   def index
     @group = Group.find(params[:group_id])
-    @groups = current_user.group
+    @groups = current_user.groups
     @message = Message.new
     @messages = Message.where(group_id: params[:group_id]).order('created_at DESC').limit(50)
   end

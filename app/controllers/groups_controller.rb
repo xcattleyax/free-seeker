@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
   def index
-    @groups = current_user.group
+    @groups = current_user.groups
     group_pluck = @groups.pluck(:id)
     @groups_index = Group.where.not(id: group_pluck)
   end
@@ -20,7 +20,7 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
-    @groups = current_user.group
+    @groups = current_user.groups
     @users = @group.users
     @user_ids = @users.pluck(:id) << current_user.id
   end
@@ -35,7 +35,7 @@ class GroupsController < ApplicationController
   def home
     @group = Group.find(params[:id])
     @users = @group.users
-    @groups = current_user.group
+    @groups = current_user.groups
   end
 
   def edit

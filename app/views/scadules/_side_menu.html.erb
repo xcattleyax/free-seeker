@@ -1,0 +1,10 @@
+<%= form_with url: scadules_path, method: :get, local: true do |f| %>
+  <div class="wrapper">
+    <%= f.collection_select(:group_id, @groups.where.not(id: @group), :id, :name, {prompt: @group.name}, {class:"scadule-select"} ) %>
+    <%= f.submit "変更",class:"button"%>
+  </div>
+<% end %>
+
+<%= link_to "予定作成", new_scadule_path, class:"link-button" %>
+
+
