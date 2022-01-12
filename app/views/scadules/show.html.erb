@@ -3,5 +3,8 @@
   <p class="scadule-list">日程: <%= @scadule.date %></p>
   <p class="scadule-list">開催グループ: <%= @scadule.group.name %></p>
   内容<p class="scadule-text"><%= @scadule.text %></p>
-  <%= link_to "編集", edit_scadule_path(@scadule.id), class:"link-button" %>
+  <div class="wrapper">
+    <%= link_to "編集", edit_scadule_path(@scadule.id), class:"link-button" %>
+    <%= link_to "削除", scadule_path(@scadule.id), method: :delete, class:"link-button" %>
+  </div>
 </div>

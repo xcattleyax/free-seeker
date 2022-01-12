@@ -42,6 +42,12 @@ class ScadulesController < ApplicationController
     redirect_to scadule_path(scadule.id)
   end
 
+  def destroy
+    scadule = Scadule.find(params[:id])
+    scadule.destroy
+    redirect_to scadules_path
+  end
+
   private
   def scadule_params
     params.require(:scadule).permit(:date, :content, :text, :group_id)
