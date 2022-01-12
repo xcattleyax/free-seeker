@@ -63,6 +63,7 @@
   width: 80%;
   border: 1px solid gray;
   margin: 0 auto;
+  margin-bottom: 10px;
   white-space: pre-wrap;
   word-break: break-all;
   text-align: left;

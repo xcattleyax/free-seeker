@@ -10,7 +10,7 @@ Rails.application.routes.draw do
       patch 'addition'
     end
   end
-  resources :scadules, only:[:index, :new, :create, :show]
+  resources :scadules, only:[:index, :new, :create, :show, :edit, :update]
   resources :posts, except:[:destroy] do
     resources :pages, only:[:new, :create, :show, :edit, :update]
     member do
