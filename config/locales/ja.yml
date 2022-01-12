@@ -8,3 +8,7 @@ ja:
         name: 名前
       group:
         name: 名前
+      scadule:
+        date: 日付
+        content: 企画名
+        text: 内容

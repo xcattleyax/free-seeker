@@ -8,4 +8,5 @@
   <p>内容</p>
   <%= f.text_area :text, class: "scadule-form-text" %>
   <%= f.submit "決定", class: "button-center"%>
+  <%= render 'layouts/error_messages', model: f.object %>
 <% end %>
