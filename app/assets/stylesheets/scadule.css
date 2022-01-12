@@ -12,4 +12,27 @@
   padding: 10px;
 }
 
+.calendar-content{
+  text-align: center;
+  color: blue;
+}
 
+/* new */
+.scadule-form-content{
+  font-size: 20px;
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.scadule-form-date{
+  font-size: 18px;
+  height: 40px;
+  margin: 0 40px 20px 0;
+}
+
+.scadule-form-text{
+  font-size: 20px;
+  height: calc(100vh - 350px);
+  width: 80%;
+  margin-bottom: 10px;
+}

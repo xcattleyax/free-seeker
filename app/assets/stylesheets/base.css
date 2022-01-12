@@ -28,6 +28,12 @@
   padding: 10px;
 }
 
+.bottom-space-center{
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+}
+
 .right-bar{
   font-size: 20px;
   height: calc(100vh - 160px);

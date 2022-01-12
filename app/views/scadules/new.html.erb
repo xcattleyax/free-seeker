@@ -1,0 +1,11 @@
+<div class="bottom-space-center">
+<%= form_with model: @scadule, local: true do |f| %>
+  企画名
+  <p><%= f.text_field :content, class: "scadule-form-content" %></p>
+  日付 <%= f.date_field :date, class: "scadule-form-date"%>
+  グループ <%= f.collection_select(:group_id, @groups, :id, :name, {}, {class:"scadule-select"})%>
+  <p>内容</p>
+  <%= f.text_area :text, class: "scadule-form-text" %>
+  <%= f.submit "決定", class: "button-center"%>
+<% end %>
+</div>
