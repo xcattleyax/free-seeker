@@ -3,12 +3,13 @@ class ScadulesController < ApplicationController
   def index
     if params[:group_id] == nil
       @group = Group.find(1)
+      @scadules = Scadule.all
     else
       @group = Group.find(params[:group_id])
+      @scadules = @group.scadules
     end
     user = current_user
     @groups = user.groups
-    @scadules = @group.scadules
   end
 
   def new
