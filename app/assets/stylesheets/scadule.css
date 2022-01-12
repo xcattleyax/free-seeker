@@ -27,10 +27,22 @@
   margin-bottom: 20px;
 }
 
+.scadule-form-set{
+  display: flex;
+  justify-content: center;
+}
+
 .scadule-form-date{
   font-size: 18px;
   height: 40px;
-  margin: 0 40px 20px 0;
+  margin: 0 40px 20px 10px;
+}
+
+.scadule-form-select{
+  font-size: 20px;
+  height: 40px;
+  width: 200px;
+  margin: 0 10px 10px 10px;
 }
 
 .scadule-form-text{
