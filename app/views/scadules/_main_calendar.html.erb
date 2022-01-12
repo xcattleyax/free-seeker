@@ -3,7 +3,7 @@
 
   <% scadules.each do |scadule| %>
     <div class="calendar-content">
-      <%= scadule.content %>
+      <%= link_to scadule.content, scadule_path(scadule.id) %>
     </div>
   <% end %>
 <% end %>

@@ -26,6 +26,10 @@ class ScadulesController < ApplicationController
     end
   end
 
+  def show
+    @scadule = Scadule.find(params[:id])
+  end
+
   private
   def scadule_params
     params.require(:scadule).permit(:date, :content, :text, :group_id)

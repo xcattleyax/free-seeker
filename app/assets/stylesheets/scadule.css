@@ -17,6 +17,9 @@
   color: blue;
 }
 
+.calendar-content a{
+  text-decoration: none;
+}
 /* new */
 .scadule-form-content{
   font-size: 20px;
@@ -35,4 +38,20 @@
   height: calc(100vh - 350px);
   width: 80%;
   margin-bottom: 10px;
+}
+
+/* show */
+.scadule-list{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.scadule-text{
+  height: calc(100vh - 300px);
+  width: 80%;
+  border: 1px solid gray;
+  margin: 0 auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+  text-align: left;
 }
