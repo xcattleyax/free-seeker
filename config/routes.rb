@@ -20,5 +20,6 @@ Rails.application.routes.draw do
       get 'list'
       get 'search'
     end
+    resources :comments, only:[:index, :create]
   end
 end
