@@ -5,5 +5,5 @@
       <p><%= link_to " #{page.page} :#{page.content }", post_page_path(post_id: @post.id, id: page.id) %></p>
     <% end %>
   </div>
-  <%= link_to "Q&A", post_comments_path(@post.id), class:"link-button" %>
+  <%= link_to "Q&A", post_comments_path(post_id: @post.id), class:"link-button" %>
 </div>

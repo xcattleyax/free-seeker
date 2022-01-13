@@ -47,14 +47,14 @@
 /* ボタン */
 .button-center{
   font-size: 18px;
-  width: 50px;
+  width: fit-content;
   display: block;
   margin: 0 auto;
 }
 
 .button{
   font-size: 18px;
-  width: 50px;
+  width: fit-content;
   display: block;
 }
 
