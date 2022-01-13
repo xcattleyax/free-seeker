@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
   def index
     @post = Post.find(params[:post_id])
     @comment = Comment.new
-    session[:page] = request.referer
+    session[:previous_url] = request.referer
   end
 
   def create
