@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_13_061938) do
+ActiveRecord::Schema.define(version: 2022_01_13_084338) do
+
+  create_table "answers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "question", null: false
+    t.text "answer", null: false
+    t.bigint "post_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["post_id"], name: "index_answers_on_post_id"
+  end
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "comment", null: false
@@ -89,6 +98,7 @@ ActiveRecord::Schema.define(version: 2022_01_13_061938) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "answers", "posts"
   add_foreign_key "comments", "posts"
   add_foreign_key "group_users", "groups"
   add_foreign_key "group_users", "users"
