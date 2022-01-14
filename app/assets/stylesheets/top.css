@@ -1,0 +1,6 @@
+.top-content-box{
+  text-align: center;
+  width: calc(100vw - 250px);
+  border: 1px solid gray;
+  margin-top: 5px;
+}

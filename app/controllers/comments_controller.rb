@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
     posts_g = Post.where(contributor: groups, status_id: 2)
     @posts = posts + posts_g
     posts_array = @posts.pluck(:id)
-    @comments = Comment.where(post_id: posts_array)
+    @comments = Comment.where(post_id: posts_array).limit(5)
   end
 
   def new

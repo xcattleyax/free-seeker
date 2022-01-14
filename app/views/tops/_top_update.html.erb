@@ -1,0 +1,7 @@
+<% @posts.each do |post| %>
+  <div class="top-content-box">
+    <%= post.title %>
+    <p><%= post.contributor.name %></p>
+    <%= "#{l post.updated_at}"%>
+  </div>
+<% end %>
