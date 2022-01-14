@@ -1,6 +1,15 @@
 class CommentsController < ApplicationController
 
   def index
+    posts = Post.where(contributor: current_user, status_id: 2)
+    groups = current_user.groups
+    posts_g = Post.where(contributor: groups, status_id: 2)
+    @posts = posts + posts_g
+    posts_array = @posts.pluck(:id)
+    @comments = Comment.where(post_id: posts_array)
+  end
+
+  def new
     @post = Post.find(params[:post_id])
     @comment = Comment.new
     session[:previous_url] = request.referer
@@ -11,7 +20,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to session[:previous_url]
     else
-      render "index"
+      render "new"
     end
   end
 
