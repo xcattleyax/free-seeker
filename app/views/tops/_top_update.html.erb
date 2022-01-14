@@ -1,7 +1,5 @@
 <% @posts.each do |post| %>
-  <div class="top-content-box">
-    <%= post.title %>
-    <p><%= post.contributor.name %></p>
-    <%= "#{l post.updated_at}"%>
-  </div>
+<div class="top-content-box"><%= link_to post.title, post_path(post.id), class:"post-link" %><%= post.contributor.name %>
+<%= "#{l post.updated_at}"%>
+</div>
 <% end %>

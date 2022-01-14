@@ -5,3 +5,15 @@
   width: 80%;
   margin-bottom: 10px;
 }
+
+.comment-top{
+  border: 1px solid lightgray;
+  overflow: hidden;
+  height: 30px;
+  padding: 5px;
+  margin: 5px 20px;
+}
+
+.comment-top a{
+  text-decoration: none;
+}

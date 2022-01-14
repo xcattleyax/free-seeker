@@ -1,4 +1,7 @@
 .top-content-box{
+  font-size: 20px;
+  word-break: hidden;
+  white-space: pre-wrap;
   text-align: center;
   width: calc(100vw - 250px);
   border: 1px solid gray;
