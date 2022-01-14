@@ -1,5 +1,5 @@
 <% @comments.each do |comment| %>
-<div class="top-content-box"><div class="comment-top"><%= link_to comment.comment, "#" %></div>投稿タイトル: <%= comment.post.title %>
+<div class="top-content-box"><div class="comment-top"><%= link_to comment.comment, comment_path(comment.id) %></div>投稿タイトル: <%= comment.post.title %>
 投稿者: <%= comment.user.name %>
 </div>
 <% end %>
