@@ -12,9 +12,7 @@
   height: 30px;
   padding: 5px;
   margin: 5px 20px;
-}
-
-.comment-top a{
+  display: block;
   text-decoration: none;
 }
 
@@ -24,7 +22,7 @@
   word-break: break-all;
   overflow-y: scroll;
   border: 1px solid gray;
-  height: 200px;
+  height: 150px;
   width: 80%;
   padding: 5px;
   margin: 0 auto;

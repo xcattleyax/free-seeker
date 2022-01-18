@@ -27,6 +27,7 @@ class CommentsController < ApplicationController
   def show
     @comment = Comment.find(params[:id])
     @post = Post.find(@comment.post_id)
+    @answer = Answer.new
   end
 
   private

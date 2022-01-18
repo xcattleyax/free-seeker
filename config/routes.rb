@@ -23,4 +23,5 @@ Rails.application.routes.draw do
     resources :comments, only:[:new, :create]
   end
   resources :comments, only:[:index, :show]
+  resources :answers, only:[:create]
 end
