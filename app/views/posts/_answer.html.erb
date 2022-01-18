@@ -5,7 +5,7 @@
     <%= link_to comment.post.title, post_answers_path(post_id: comment.post.id), class:"qa-title" %>
     <%= comment.post.contributor.name %>
     <p><%= l comment.updated_at %></p>
-    <%= link_to "確認済", comment_path(comment.id), class:"link-button" %>
+    <%= link_to "確認済", comment_path(comment.id), method: :patch, class:"link-button" %>
   </div>
 <% end %>
 </div>

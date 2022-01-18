@@ -37,7 +37,7 @@ class CommentsController < ApplicationController
       redirect_to comments_path
     else
       @comment.update(status_id: 3)
-      redirect_to comments_path
+      redirect_to qa_posts_path
     end
   end
 
