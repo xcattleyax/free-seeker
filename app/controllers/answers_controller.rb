@@ -13,7 +13,11 @@ class AnswersController < ApplicationController
       @comment = Comment.find(params[:answer][:comment_id])
       render "comments/show"
     end
-  end 
+  end
+
+  def show
+    @answer = Answer.find(params[:id])
+  end
 
   def answer_params
     params.require(:answer).permit(:question, :answer).merge(post_id: params[:post_id])

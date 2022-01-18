@@ -21,7 +21,7 @@ Rails.application.routes.draw do
       get 'search'
     end
     resources :comments, only:[:new, :create]
-    resources :answers, only:[:index, :create]
+    resources :answers, only:[:index, :create, :show]
   end
   resources :comments, only:[:index, :show]
 end
