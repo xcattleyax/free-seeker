@@ -85,6 +85,12 @@ class PostsController < ApplicationController
     @posts = current_user.posts.where(status_id: 2)
   end
 
+  def qa
+    @answers = Answer.order('created_at DESC').limit(5)
+    @comments = Comment.where(user_id: current_user.id, status_id: 2).order('updated_at DESC').limit(5)
+    @groups = current_user.groups
+  end
+
   private
 
   def post_params

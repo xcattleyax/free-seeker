@@ -54,3 +54,25 @@
   white-space: pre-wrap;
   margin: 0 auto;
 }
+
+/* qa */
+.answer-index{
+  font-size: 20px;
+  width: calc((100vw - 300px) / 2);
+  padding: 5px;
+  border: 1px solid gray;
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+
+.qa-box{
+  padding: 10px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.qa-title{
+  text-decoration: none;
+  display: block;
+  border: 1px solid lightgray;
+}

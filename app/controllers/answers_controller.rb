@@ -2,6 +2,7 @@ class AnswersController < ApplicationController
 
   def index
     @answers = Answer.where(post_id: params[:post_id])
+    @post = Post.find(params[:post_id])
   end
 
   def create

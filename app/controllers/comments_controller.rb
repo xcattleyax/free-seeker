@@ -2,8 +2,8 @@ class CommentsController < ApplicationController
 
   def index
     posts = Post.where(contributor: current_user, status_id: 2)
-    groups = current_user.groups
-    posts_g = Post.where(contributor: groups, status_id: 2)
+    @groups = current_user.groups
+    posts_g = Post.where(contributor: @groups, status_id: 2)
     @posts = posts + posts_g
     posts_array = @posts.pluck(:id)
     @comments = Comment.where(post_id: posts_array, status_id: 1).limit(5)
@@ -32,8 +32,13 @@ class CommentsController < ApplicationController
 
   def update
     @comment = Comment.find(params[:id])
-    @comment.update(status_id: 2)
-    redirect_to comments_path
+    if @comment.status_id == 1
+      @comment.update(status_id: 2)
+      redirect_to comments_path
+    else
+      @comment.update(status_id: 3)
+      redirect_to comments_path
+    end
   end
 
   private
