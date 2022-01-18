@@ -7,6 +7,6 @@
   </div>
   <div class="wrapper">
     <%= link_to "コメント", new_post_comment_path(post_id: @post.id), class:"link-button" %>
-    <%= link_to "Q&A", "#", class:"link-button" %>
+    <%= link_to "Q&A", post_answers_path(post_id: @post.id), class:"link-button" %>
   </div>
 </div>

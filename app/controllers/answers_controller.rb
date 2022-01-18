@@ -1,5 +1,9 @@
 class AnswersController < ApplicationController
 
+  def index
+    @answers = Answer.where(post_id: params[:post_id])
+  end
+
   def create
     @answer = Answer.new(answer_params)
     if @answer.save

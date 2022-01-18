@@ -17,3 +17,16 @@
   width: 80%;
   margin-bottom: 10px;
 }
+
+/* index */
+.answer-question{
+  width: 80%;
+  padding: 10px;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid gray;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+}
