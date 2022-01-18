@@ -80,6 +80,11 @@ class PostsController < ApplicationController
     redirect_to post_page_path(post_id: params[:id], id: page.id)
   end
 
+  def my
+    @groups = current_user.groups if user_signed_in?
+    @posts = current_user.posts.where(status_id: 2)
+  end
+
   private
 
   def post_params
