@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
     posts_g = Post.where(contributor: groups, status_id: 2)
     @posts = posts + posts_g
     posts_array = @posts.pluck(:id)
-    @comments = Comment.where(post_id: posts_array).limit(5)
+    @comments = Comment.where(post_id: posts_array, status_id: 1).limit(5)
   end
 
   def new
@@ -30,8 +30,15 @@ class CommentsController < ApplicationController
     @answer = Answer.new
   end
 
+  def update
+    @comment = Comment.find(params[:id])
+    @comment.update(status_id: 2)
+    redirect_to comments_path
+  end
+
   private
   def comment_params
     params.require(:comment).permit(:comment).merge(status_id: 1, post_id: params[:post_id], user_id: current_user.id)
   end
+
 end
