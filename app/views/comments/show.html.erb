@@ -1,11 +1,14 @@
 <div class="bottom-space-center">
   <%= @comment.user.name %>さんから
-  <%= @post.title %>の投稿についてのコメントです
+  [<%= @post.title %>]の投稿についてのコメントです
   <div class="comment-show-space"><%= @comment.comment %></div>
 </div>
 
-<%= form_with model: @answer, class:"answer-form", local: true do |f| %>
+<%= form_with model: [@post, @answer], class:"answer-form", local: true do |f| %>
   質問内容<p><%= f.text_field :question, class:"answer-field" %></p>
   回答内容<p><%= f.text_area :answer, class:"answer-area" %></p>
+  <%= f.hidden_field :comment_id, value: @comment.id%>
   <%= f.submit "Q&Aの作成", class:"button-center"%>
+  <%= render 'layouts/error_messages', model: f.object %>
 <% end %>
+

@@ -1,5 +1,5 @@
 class Answer < ApplicationRecord
-  belongs_to :posts
+  belongs_to :post
 
   with_options presence: true do
     validates :question
