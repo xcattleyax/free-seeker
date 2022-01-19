@@ -5,15 +5,15 @@ free-seeker
 # URL
 https://free-seeker.herokuapp.com/
 # テスト用アカウント
-email: Gest@gmail.com
+email: gest@gmail.com
 password: 123456
 # 利用方法
 <dl>
-## チャット機能
+<dt>チャット機能</dt>
 <dt>1.トップページからユーザー新規登録を行う。</dt>
 <dt>2.グループを選択し、チャット画面に遷移する。</dt>
 <dt>3.画面下部のチャットフォームよりコメントを投稿する</dt>
-## 投稿機能
+<dt>投稿機能</dt>
 <dt>1.トップページからユーザー新規登録を行う。</dt>
 <dt>2.新規投稿よりタイトル入力画面に遷移、タイトルを保存する。</dt>
 <dt>3.ページタイトル、内容を書いていき、公開を行う。</dt>
@@ -42,11 +42,12 @@ https://docs.google.com/spreadsheets/d/19daczIuNrADmIKwMs0c17JsWxMc2Jhs4_58LPiDK
 </dl>
 
 # ローカルでの動作方法
-以下のコマンドを順に実行してください。
-% git clone https://github.com/free-seeker
-% cd free-seeker
-% bundle install
-% yarn install
+<dl>
+<dt>以下のコマンドを順に実行してください。</dt>
+<dt>% git clone https://github.com/free-seeker</dt>
+<dt>% cd free-seeker</dt>
+<dt>% bundle install</dt>
+<dt>% yarn install</dt>
 # テーブル設計
 
 ## users テーブル
