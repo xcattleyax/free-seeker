@@ -12,11 +12,11 @@ email: gest@gmail.com
 password: 123456
 
 # 利用方法
-## チャット機能
+### チャット機能
 1.トップページからユーザー新規登録を行う。  
 2.グループを選択し、チャット画面に遷移する。  
 3.画面下部のチャットフォームよりコメントを投稿する  
-## 投稿機能
+### 投稿機能
 1.トップページからユーザー新規登録を行う。  
 2.新規投稿よりタイトル入力画面に遷移、タイトルを保存する。  
 3.ページタイトル、内容を書いていき、公開を行う。
@@ -28,6 +28,9 @@ password: 123456
 https://docs.google.com/spreadsheets/d/19daczIuNrADmIKwMs0c17JsWxMc2Jhs4_58LPiDKaIw/edit#gid=982722306
 
 # 実装した機能についての画像と説明
+### トップページ
+[![Image from Gyazo](https://i.gyazo.com/2bd8cdf4ad2d4a0eefbbaff8a31d8550.png)](https://gyazo.com/2bd8cdf4ad2d4a0eefbbaff8a31d8550)
+トップページです。こちらから様々な機能にアクセスできます。初期状態として、投稿更新情報が表示されるようになっています。
 
 # 実装予定の機能
 いいね機能などを考えている
