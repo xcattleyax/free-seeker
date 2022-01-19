@@ -5,7 +5,7 @@ free-seeker
 # URL
 https://free-seeker.herokuapp.com/
 # テスト用アカウント
-email: gest@gmail.com
+email: gest@gmail.com  
 password: 123456
 # 利用方法
 <dl>
@@ -152,6 +152,7 @@ https://docs.google.com/spreadsheets/d/19daczIuNrADmIKwMs0c17JsWxMc2Jhs4_58LPiDK
 | ----------- | ---------- | ------------------------------ |
 | comment     | string     | null: false                    |
 | post        | references | null: false, foreign_key: true |
+| user        | references | null: false, foreign_key: true |
 
 ### Association
 
