@@ -1,3 +1,5 @@
+<%= link_to "予定作成", new_scadule_path, class:"link-button" %>
+
 <%= month_calendar attribute: :date, events: @scadules do |date, scadules| %>
   <%= date.day %>
 

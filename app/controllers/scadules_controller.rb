@@ -1,15 +1,8 @@
 class ScadulesController < ApplicationController
 
   def index
-    if params[:group_id] == nil
-      @groups = current_user.groups
-      @group = @groups.first
-      @scadules = Scadule.where(group_id: @groups)
-    else
-      @group = Group.find(params[:group_id])
-      @groups = current_user.groups
-      @scadules = @group.scadules
-    end
+    groups = current_user.groups.pluck(:id)
+    @scadules = Scadule.where(group_id: groups)
   end
 
   def new
