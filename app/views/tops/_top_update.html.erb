@@ -1,0 +1,5 @@
+<% @posts.each do |post| %>
+<div class="top-content-box"><%= link_to post.title, post_path(post.id), class:"post-link" %><%= post.contributor.name %>
+<%= "#{l post.updated_at}"%>
+</div>
+<% end %>

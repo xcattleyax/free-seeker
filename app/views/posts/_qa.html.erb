@@ -1,0 +1,10 @@
+<div class="qa-box">
+Q&A更新情報
+<% @answers.each do |answer| %>
+  <div class="answer-index">
+    <%= link_to answer.post.title, post_path(answer.post.id), class:"qa-title" %>
+    <%= answer.post.contributor.name %>
+    <p><%= l answer.created_at %></p>
+  </div>
+<% end %>
+</div>

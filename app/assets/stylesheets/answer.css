@@ -1,0 +1,78 @@
+.answer-form{
+  font-size: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.answer-field{
+  font-size: 20px;
+  height: 30px;
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+.answer-area{
+  font-size: 20px;
+  height: 200px;
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+/* index */
+.answer-question{
+  width: 80%;
+  padding: 10px;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid gray;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+/* show */
+.answer-show-question{
+  height: 50px;
+  width: 80%;
+  overflow-y: scroll;
+  text-align: left;
+  word-break: break-all;
+  border: 1px solid gray;
+  padding: 10px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.answer-answer{
+  height: calc(100vh - 250px);
+  width: 80%;
+  overflow-y: scroll;
+  word-break: break-all;
+  text-align: left;
+  border: 1px solid gray;
+  white-space: pre-wrap;
+  margin: 0 auto;
+}
+
+/* qa */
+.answer-index{
+  font-size: 20px;
+  width: calc((100vw - 300px) / 2);
+  padding: 5px;
+  border: 1px solid gray;
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+
+.qa-box{
+  padding: 10px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.qa-title{
+  text-decoration: none;
+  display: block;
+  border: 1px solid lightgray;
+}

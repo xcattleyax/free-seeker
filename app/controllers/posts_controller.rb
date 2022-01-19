@@ -80,6 +80,17 @@ class PostsController < ApplicationController
     redirect_to post_page_path(post_id: params[:id], id: page.id)
   end
 
+  def my
+    @groups = current_user.groups if user_signed_in?
+    @posts = current_user.posts.where(status_id: 2)
+  end
+
+  def qa
+    @answers = Answer.order('created_at DESC').limit(5)
+    @comments = Comment.where(user_id: current_user.id, status_id: 2).order('updated_at DESC').limit(5)
+    @groups = current_user.groups
+  end
+
   private
 
   def post_params

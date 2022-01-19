@@ -1,6 +1,15 @@
 class CommentsController < ApplicationController
 
   def index
+    posts = Post.where(contributor: current_user, status_id: 2)
+    @groups = current_user.groups
+    posts_g = Post.where(contributor: @groups, status_id: 2)
+    @posts = posts + posts_g
+    posts_array = @posts.pluck(:id)
+    @comments = Comment.where(post_id: posts_array, status_id: 1).limit(5)
+  end
+
+  def new
     @post = Post.find(params[:post_id])
     @comment = Comment.new
     session[:previous_url] = request.referer
@@ -11,12 +20,30 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to session[:previous_url]
     else
-      render "index"
+      render "new"
+    end
+  end
+
+  def show
+    @comment = Comment.find(params[:id])
+    @post = Post.find(@comment.post_id)
+    @answer = Answer.new
+  end
+
+  def update
+    @comment = Comment.find(params[:id])
+    if @comment.status_id == 1
+      @comment.update(status_id: 2)
+      redirect_to comments_path
+    else
+      @comment.update(status_id: 3)
+      redirect_to qa_posts_path
     end
   end
 
   private
   def comment_params
-    params.require(:comment).permit(:comment).merge(post_id: params[:post_id])
+    params.require(:comment).permit(:comment).merge(status_id: 1, post_id: params[:post_id], user_id: current_user.id)
   end
+
 end

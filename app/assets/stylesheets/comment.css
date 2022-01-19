@@ -5,3 +5,26 @@
   width: 80%;
   margin-bottom: 10px;
 }
+
+.comment-top{
+  border: 1px solid lightgray;
+  overflow: hidden;
+  height: 30px;
+  padding: 5px;
+  margin: 5px 20px;
+  display: block;
+  text-decoration: none;
+}
+
+.comment-show-space{
+  font-size: 20px;
+  white-space: pre-wrap;
+  word-break: break-all;
+  overflow-y: scroll;
+  border: 1px solid gray;
+  height: 150px;
+  width: 80%;
+  padding: 5px;
+  margin: 0 auto;
+  text-align: left;
+}

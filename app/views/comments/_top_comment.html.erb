@@ -1,0 +1,4 @@
+<% @comments.each do |comment| %>
+<div class="top-content-box"><%= link_to comment.comment, comment_path(comment.id), class:"comment-top" %>投稿タイトル: <%= comment.post.title %>
+投稿者: <%= comment.user.name %><%= link_to "回答済", comment_path(comment.id), method: :patch, class:"link-button"%></div>
+<% end %>

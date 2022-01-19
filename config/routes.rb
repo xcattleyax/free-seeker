@@ -19,7 +19,11 @@ Rails.application.routes.draw do
     collection do
       get 'list'
       get 'search'
+      get 'my'
+      get 'qa'
     end
-    resources :comments, only:[:index, :create]
+    resources :comments, only:[:new, :create]
+    resources :answers, only:[:index, :create, :show]
   end
+  resources :comments, only:[:index, :show, :update]
 end

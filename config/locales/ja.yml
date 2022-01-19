@@ -12,3 +12,6 @@ ja:
         date: 日付
         content: 企画名
         text: 内容
+      answer:
+        question: 質問内容
+        answer: 回答内容
