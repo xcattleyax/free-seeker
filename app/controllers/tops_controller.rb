@@ -5,9 +5,11 @@ class TopsController < ApplicationController
   end
 
   def new
-    group = Group.first
-    user = User.find(current_user.id)
-    group.users << user
-    redirect_to root_path
+    unless Group.first == nil
+      group = Group.first
+      user = User.find(current_user.id)
+      group.users << user
+      redirect_to root_path
+    end
   end
 end
