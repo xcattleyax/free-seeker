@@ -9,7 +9,7 @@ class TopsController < ApplicationController
       group = Group.first
       user = User.find(current_user.id)
       group.users << user
-      redirect_to root_path
     end
+    redirect_to root_path
   end
 end
